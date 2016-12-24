@@ -1,0 +1,527 @@
+/*
+*****************************
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+AUTHOR: Justin Tew, Justin Tew Designs - www.justin.digital
+DATE:  11/24/2016
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*****************************
+*/
+
+
+/*
+*****************************
+/////////////////////////////
+GLOBALS VARS
+/////////////////////////////
+*****************************
+*/
+
+$primary-color: #a5d757;
+$primary-color-shade:#71a522;
+$secondary-color: #424143;
+$off-white: #f1f1f1;
+$gray: #ccc;
+$global-radius: 4px;
+
+
+/*
+*****************************
+/////////////////////////////
+TYPOGRAPHY
+/////////////////////////////
+*****************************
+*/
+body{
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 900;
+  color:#fff;
+}
+
+h2{
+  font-size: 3rem;
+}
+
+h3{
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+p{
+  color:#fff;
+  font-size:19px;
+}
+
+
+/*
+*****************************
+/////////////////////////////
+NAVIGATION
+/////////////////////////////
+*****************************
+*/
+
+nav{
+  display: block;
+  width:100%;
+  position:fixed;
+  top:0;
+  transition:all .25s;
+  background:#fff;
+  z-index: 1000;
+
+   ul{
+	   	list-style: none;
+	  	padding:0;
+	  	margin:0;
+	  	width:100%;
+
+  	li{
+  		float:right;
+  	}
+
+	li:first-of-type{
+	  	float:left;
+	}
+
+	a{
+	    text-decoration: none;
+	    color:$primary-color;
+	    font-size:18px;
+	    transition:all .25s;
+	    float:right;
+	    padding:20px;
+      border-bottom: 3px solid transparent;
+	    &:hover{
+	    	color:$primary-color;
+        border-bottom: 3px solid $primary-color;
+	    }
+	}
+
+   }
+
+
+}
+
+.logo-link{
+	padding: 0;
+
+	img{
+    width: 181px;
+    position: absolute;
+    padding: 10px;
+    top: -10px;
+	}
+}
+
+.call-out{
+	padding: 5px 20px;
+    border: 1px solid $primary-color;
+    margin: 15px 15px;
+    border-radius: 4px;
+    &:hover {
+    	background:$primary-color;
+    	border: 1px solid transparent;
+    	color:#fff;
+    }
+}
+
+.nav-at-top{
+  background: none !important;
+}
+
+
+/*
+*****************************
+/////////////////////////////
+SITE-WIDE
+/////////////////////////////
+*****************************
+*/
+
+
+body{
+	background:#fff;
+}
+
+
+.row{
+	max-width: 1040px;
+	width: 90%;
+}
+
+.button{
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: none;
+    color:#fff;
+    background: $primary-color;
+    font-size: 20px;
+    width:200px;
+    border:none;
+    transition: all .25s;
+    &:hover {
+      color:#fff;
+      background: $primary-color-shade;
+    }
+
+}
+
+.selected{
+	color:$secondary-color;
+}
+
+.secondary-color{
+  color:$secondary-color !important;
+}
+
+.white{
+  color:#fff !important;
+}
+
+.tester{
+	width: 100%;
+	height: 100vh;
+  min-height: 500px;
+	background: #fff;
+}
+
+.image-overlay-h1 {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    text-align: center;
+    color: #fff;
+    width: 70%;
+    margin: 0 auto;    
+    font-size: 30px;
+	  font-weight: 300;
+    letter-spacing: 5px;
+    z-index: 200;
+}
+
+/*
+*****************************
+/////////////////////////////
+HOME PAGE
+/////////////////////////////
+*****************************
+*/
+
+
+.bg{
+	width: 100%;
+	height: 100vh;
+  min-height: 500px;
+	background:$secondary-color;
+}
+
+.continue-arrow{
+	position: absolute;
+    font-size: 5em;
+    color: #fff;
+    bottom: 0;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    left:48%;
+    left: calc(50% - 40px); /* 50% minus half the width of the arrow*/
+    transition:all .5s;
+    cursor: pointer;
+    z-index: 1000;
+    &:hover{
+    	bottom:-20px;
+    }
+}
+
+.img-overlay, .img-overlay2{
+	//position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  height: 100vh;
+  min-height: 500px;
+  top: 0;
+}
+
+.img-overlay2{
+  left:0;
+  transition: all .25s; 
+  &:hover {
+    opacity:0;
+  }
+    
+}
+
+
+.about-bg{
+  width: 100%;
+  padding: 150px 0px 300px;
+  background-image: url(../img/about.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: bottom;
+
+}
+
+
+
+.buy-beer{
+  background-image: url(../img/b2.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: top;
+  float: left;
+  width: 100%;
+  padding: 100px 100px 200px;
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+
+}
+
+
+.bg-beer{
+  background: url(../img/beer.jpg);
+}
+.buy-pizza{
+  background-image: url(../img/p1.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: top;
+  float: left;
+  width:100%;
+  padding: 100px 100px 200px;
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+
+
+}
+
+#contact-section{
+  width:100%;
+  background:#fff;
+  float: left;
+  position: relative;
+  h3{
+    text-align: center;
+    margin: 100px 0 40px;
+    position: relative;
+    z-index: 100;
+  }
+
+  a{
+    margin: 0 auto;
+    max-width: 500px;
+    width: 90%;
+    display: block;
+    text-align: center;
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 125px;
+    font-size: 1.5em;
+    background: none;
+    color: #fff;
+    background: #a5d757;
+    border-radius: 4px;
+    position: relative;
+    z-index: 100;
+    transition: all .25s;
+    &:hover{
+      background:$primary-color-shade;
+    };
+
+  }
+
+  .side-knifes{
+    position: absolute;
+    width: 500px;
+    right: 0px;
+    bottom:0px;
+  }
+}
+
+#review-section{
+  width:100%;
+  background:$primary-color;
+
+  p{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  P:last-of-type{
+    padding-bottom: 80px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  h3{
+    text-align: center;
+    padding: 60px 0 30px;
+  }
+
+  &:after{
+    position: relative;
+    top:0;
+    width: 100px;
+    background:$primary-color;
+    content:'';
+  };
+}
+
+footer{
+  width:100%;
+  float: left;
+  background:$secondary-color;
+  position: relative;
+  z-index: 1000;
+  color: $primary-color;
+
+  .footer-sect{
+    float:left;
+  }
+
+  .logo{
+    width: 120px;
+    position: relative;
+    float: left;
+    /* bottom: -20px; */
+    top: -30px;
+    margin-bottom: -30px;
+    margin-right: 40px;
+  }
+
+  p{
+    float: left;
+    margin-top: 34px;
+    margin-bottom: 0;
+    color: #b9b9b9;
+    font-size: 14px;
+
+  }
+  p:last-of-type{
+    float:none;
+    margin-top: 0;
+    padding-bottom: 0;
+
+  }
+
+  i{
+    font-size: 35px !important;
+    color: #b9b9b9;
+    transition: all .5s;
+    &:hover{
+      color:$primary-color;
+    };
+  }
+
+  a{
+    margin-right: 20px;
+  }
+
+  .logo-sect{
+    float: right;
+    margin-top: 39px;
+
+  }
+}
+
+
+
+
+.bg-menu, .bg-contact, .bg-merch, .bg-beer{
+  height: 50vh;
+}
+
+
+
+/*text-slider*/
+#slides {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+#slides ul {
+  list-style: none;
+  width: 100%;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#slides li {
+  width: 100%;
+  height: 250px;
+  float: left;
+  text-align: center;
+  position: relative;
+  font-family: lato, sans-serif;
+}
+
+.btn-bar {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 40px;
+}
+
+#buttons {
+  padding: 0 0 5px 0;
+  float: right;
+}
+
+#buttons a {
+  text-align: center;
+  display: block;
+  font-size: 50px;
+  float: left;
+  outline: 0;
+  margin: 0 60px;
+  color: #b14943;
+  text-decoration: none;
+  display: block;
+  padding: 9px;
+  width: 35px;
+}
+
+a#prev:hover,
+a#next:hover {
+  color: #FFF;
+  text-shadow: .5px 0px #b14943;
+}
+
+
+
+
+
+  @media (min-width: 1024px) {
+
+    .side-knifes{
+      width:300px;
+    }
+
+    .buy-pizza{
+      width: 50%;
+    }
+
+    .buy-beer{
+      width: 50%;
+    }
+    
+  }
